@@ -1,57 +1,65 @@
 config = {
+
+    "HPLC-Pumpe": { 
+        "type": "Vorgabe",
+        "x": 200,
+        "y": 780,
+        "Box": 1,
+        "DeviceInfo":{  "Bezeichnung":"HPLC Pumpe TV.2 Test1",
+                        "Seriennummer":"TestNummer123",
+                        "ChemTherm-DeviceID": 15,
+                        "Information": "Test DLR",
+                        "unit": "ml/min",
+                        "gradient": 1, 
+                        "y-axis":   0,  
+                        }
+    },
+
     "Verdampfer": { 
-        "type": "ExtOutput",
-        "output_device": "TiX",
-        "output_channel": 1,
-        "unit": "ml/min",
-        "gradient": 0.4,
-        "y-axis":   0,
-        "x": 370,
-        "y": 940,
+        "type": "ExtInput",
+        "input_device": "Zyk",
+        "input_channel": 1,
+        "x": 290,
+        "y":  240,
+        "Box": 1,
+        "DeviceInfo":{  "Bezeichnung":"Verdampver TV.2 Test1",
+                        "Seriennummer":"TestNummer123",
+                        "ChemTherm-DeviceID": 15,
+                        "Information": "Test DLR",
+                        "Power": "6000", # Angabe der Leistung in Watt
+                        "unit": "W",
+                        "gradient": 0.3, # Steigung umrechnung Rohdaten mA in W 
+                        "y-axis":   0,  # Y-Achsenabschnitt umrechnung Rohdaten
+                        }
     },
     
     "p_1": { 
         "type": "pressure",
         "input_device": "23UK",
         "input_channel": 0,
-        "unit": "mbar",
-        "gradient": 0.4,
-        "y-axis":   0,
         "x": 370,
         "y": 540,
+        "DeviceInfo":{  "Bezeichnung":"IFM PT5052",
+                        "Seriennummer":"TestNummer1111",
+                        "ChemTherm-DeviceID": 19,
+                        "Information": "5 bar",
+                        "unit": "mbar",
+                        "gradient": 0.5, # Steigung umrechnung Rohdaten mA in mbar 
+                        "y-axis":   0,  # Y-Achsenabschnitt umrechnung Rohdaten
+                        }
     },
     
-    "p_2": { 
-        "type": "pressure",
-        "input_device": "23UK",
-        "input_channel": 1,
-        "unit": "mbar",
-        "gradient":1,
-        "y-axis":   0,
-        "x": 955,
-        "y": 890,
-    },
-    
-    "p_3": { 
-        "type": "pressure",
-        "input_device": "TiX",
-        "input_channel": 0,
-        "unit": "mbar",
-        "gradient":1,
-        "y-axis":   0,
-        "x": 955,
-        "y": 890,
-    },
-    
-       
+          
     "T_1": { 
         "type": "thermocouple",
         "tc_type": "K",
         "input_device": "WPP",
         "input_channel": 0,
-        "unit": "°1C",
         "x": 890,
         "y": 690,
+        "DeviceInfo":{  "Bezeichnung":"Verdampfer Regeltemperatur",
+                        "unit": "°1C",
+                        }
     },
     
     "T_2": { 
@@ -59,9 +67,11 @@ config = {
         "tc_type": "N",
         "input_device": "WQ3",
         "input_channel": 0,
-        "unit": "°2",
         "x": 130,
         "y": 450,
+        "DeviceInfo":{  "Bezeichnung":"Verdampfer Regeltemperatur",
+                        "unit": "°1C",
+                        }
     },
     
     "T_3": { 
@@ -69,18 +79,10 @@ config = {
         "tc_type": "N",
         "input_device": "WjR",
         "input_channel": 0,
-        "unit": "°3",
         "x": 610,
         "y": 320,
-    } ,
-    
-    "T_4": { 
-        "type": "thermocouple",
-        "tc_type": "N",
-        "input_device": "Wj2",
-        "input_channel": 0,
-        "unit": "°4",
-        "x": 770,
-        "y": 270,
-    }      
+        "DeviceInfo":{  "Bezeichnung":"Verdampfer Regeltemperatur",
+                        "unit": "°1C",
+                        }
+    }    
 }
