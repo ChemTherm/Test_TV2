@@ -13,7 +13,7 @@ from time import sleep
 def main():
     json_GUI = "GUI_settings"
 
-    tfh_obj = TFH("localhost", 4223, debug_mode = 1)
+    tfh_obj = TFH("localhost", 4223, debug_mode = 0)
     
     tk_obj = setup_gui(json_GUI)
 
