@@ -103,3 +103,53 @@ config = {
                         }
     }    
 }
+
+tkinter = {     
+    "TKINTER":{
+        "Name": "MFC Steuerung",
+        "background-color": "#F2F2F2",
+        "border-color": "#000000",
+        "tabpadx": 50,
+        "font-size": 22,
+        "screen_width": 1600,
+        "screen_height": 1000,
+        "has_save_function": True,  # Steuert, ob Save-Funktion vorhanden ist
+        "has_close_button": True    # Steuert, ob ein Close-Button angezeigt wird
+    
+    },
+    "Background":{
+        "name": "./img/HeizungsRegelung.png",
+        "width": 1420,
+        "height": 715,
+        "x": 100,
+        "y": 220
+    },
+    "Close":{
+        "name": "./img/close.png",
+        "width": 50,
+        "height": 50,
+        "factor": 1,
+        "x": 700,
+        "y": 50
+        
+    },  
+    "Frames": {  # Neue Konfiguration für optionale Frames
+        "control": {
+            "enabled": True,
+            "title": "Handsteuerung",  # Titel für das Label im Frame
+            "fg_color": "#FFFFFF",
+            "border_color": "#000000",
+            "border_width": 5,
+            "padx": 20,
+            "pady": 20
+        },
+        "timer": {
+            "enabled": False  # Wenn False, wird dieser Frame nicht erstellt
+        }
+    },
+        
+    "PATH":{
+        "SaveFile": "./Daten/Test.dat",
+        "images": "./img/"
+    }
+}
